@@ -12,18 +12,22 @@ def pig_latin(word):
         res = word[1:] + word[0] + 'ay'
         
     return res
-        
-#print(pig_latin('python'))
+       
+# Handle punctuation
+def pl_punctuation(word):
+    punct = ['.',',','!','?',':',';']
+    if not word[-1] in punct:
+        return pig_latin(word)
+    return pig_latin(word[0:-1]) + word[-1] 
 
 # Handle caitalisation
 def pl_capitalization(word):
     if not word[0].isupper():
-        res = pig_latin(word)
+        res = pl_punctuation(word)
     else:
         newWord = word[0].lower() + word[1:]
-        res = pig_latin(newWord).capitalize()
+        res = pl_punctuation(newWord).capitalize()
         
     return(res)
-        
 
-print(pl_capitalization("Link"))
+print(pl_capitalization("Plink."))
