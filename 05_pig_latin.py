@@ -30,4 +30,13 @@ def pl_capitalization(word):
         
     return(res)
 
-print(pl_capitalization("Plink."))
+# Same/Different vowels edition
+def pl_vowels(word):
+    vowels = set()
+    for w in word:
+        if w in 'aeiou':
+            vowels.add(w)
+    if len(vowels) > 1:
+        return f'{word}way'
+    else:
+        return f'{word[1:]}{word[0]}ay'
