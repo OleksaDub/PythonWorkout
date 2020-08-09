@@ -6,6 +6,7 @@ Created on Sun Aug  9 2020
 @author: oleksadub
 """
 
+#My solution
 def strsort(str):
     chars = []
     for char in str:
@@ -14,5 +15,7 @@ def strsort(str):
 
     return ''.join(chars)
 
+#The book's solution
+def strsort_book(str):
+    return ''.join(sorted(str))
 
-print(strsort('cdba'))
