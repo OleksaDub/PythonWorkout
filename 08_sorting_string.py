@@ -19,3 +19,8 @@ def strsort(str):
 def strsort_book(str):
     return ''.join(sorted(str))
 
+def sortSentence(sentence):
+    s = sentence.split(' ')
+    newSent = sorted(s)
+    return ', '.join(newSent)
+
